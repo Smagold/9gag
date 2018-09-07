@@ -13,7 +13,7 @@ function readPost(post) {
     type = Type.IMAGE;
     image = post.images.image460.url;
   }
-  return new Post(post.id, post.url, post.title, type, post.nsfw, post.hasLongPostCover, post.upVoteCount, post.commentsCount, image);
+  return new Post(post.id, post.url, post.title, type, post.nsfw, post.hasLongPostCover, post.upVoteCount, post.commentsCount, image, post.tags);
 }
 
 function readComment(comment) {

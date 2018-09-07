@@ -1,7 +1,7 @@
 const Type = require('./type');
 
 class Post {
-  constructor(id, url, title, type, nsfw, hasLongPostCover, upVoteCount, commentsCount, content) {
+  constructor(id, url, title, type, nsfw, hasLongPostCover, upVoteCount, commentsCount, content, tags) {
     this.id = id;
     this.url = url;
     this.title = title;
@@ -12,6 +12,7 @@ class Post {
     this.commentsCount = commentsCount;
     this.content = content;
     this.comments = [];
+    this.tags = (tags || []).map((a) => a.key || a);
   }
 
   isVideo() {
